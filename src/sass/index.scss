@@ -1,9 +1,15 @@
 @import './variables.scss';
 @import './mixins.scss';
+@import '../containers/App/app.scss';
+@import '../containers/Nav/nav.scss';
 
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+li {
+  list-style: none;
 }

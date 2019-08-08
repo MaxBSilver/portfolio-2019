@@ -1,5 +1,5 @@
-@mixin transform($property) {
-  -webkit-transform: $property;
-  -ms-transform: $property;
-  transform: $property;
+@mixin flex($dir, $jc) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jc;
 }

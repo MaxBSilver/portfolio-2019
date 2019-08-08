@@ -1,0 +1,8 @@
+nav {
+  @include flex( row, space-around);
+  width: 300px;
+  padding: 10px;
+  li {
+    
+  }
+}

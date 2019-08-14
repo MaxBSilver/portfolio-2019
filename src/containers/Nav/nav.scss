@@ -1,13 +1,15 @@
 nav {
+  background-color: #E0EBE8;
+  @include flex( row, flex-end);
+  padding:30px;
+
   & div {
     @include flex( row, space-around);
-    width: 40%;
+    width: 25%;
     padding: 10px;
   }
   li {
     padding: 4px;
-    color: $background-main;
+    color: #4AB19A;
   }
 }
-
-// @media 

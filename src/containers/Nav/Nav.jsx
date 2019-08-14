@@ -14,9 +14,9 @@ export default class Nav extends Component {
 		return (
 			<nav>
 				<div className="nav-container">
-					<li>home</li>
-					<li>resume</li>
-					<li>my story</li>
+					<li>About</li>
+					<li>Projects</li>
+					<li>Notes</li>
 				</div>
 			</nav>
 		);

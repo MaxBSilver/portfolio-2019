@@ -13,9 +13,11 @@ export default class Nav extends Component {
 		//TODO setup react-router and convert links
 		return (
 			<nav>
-				<li>Home</li>
-				<li>Resume</li>
-				<li>My Story</li>
+				<div className="nav-container">
+					<li>home</li>
+					<li>resume</li>
+					<li>my story</li>
+				</div>
 			</nav>
 		);
 	}

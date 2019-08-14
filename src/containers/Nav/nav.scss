@@ -1,8 +1,13 @@
 nav {
-  @include flex( row, space-around);
-  width: 300px;
-  padding: 10px;
+  & div {
+    @include flex( row, space-around);
+    width: 40%;
+    padding: 10px;
+  }
   li {
-    
+    padding: 4px;
+    color: $background-main;
   }
 }
+
+// @media 

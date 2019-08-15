@@ -1,5 +1,4 @@
 import React from 'react';
-import fort from '../../assets/fort.png';
 
 export default function Header (){
 	return (

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { NavLink } from 'react-router-dom';
 export default class Nav extends Component {
 	constructor (props) {
 		super(props);
@@ -14,9 +14,9 @@ export default class Nav extends Component {
 		return (
 			<nav>
 				<div className="nav-container">
-					<li>About</li>
-					<li>Projects</li>
-					<li>Notes</li>
+					<NavLink to="/">About</NavLink>
+					<NavLink to="/projects">Projects</NavLink>
+					<NavLink to="/notes">Notes</NavLink>
 				</div>
 			</nav>
 		);

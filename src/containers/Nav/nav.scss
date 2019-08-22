@@ -2,7 +2,10 @@ nav {
   @include flex( row, flex-end);
   height: 5%;
   background-color: inherit;
-
+  & .selected {
+    color: rgb(255, 162, 101);
+    transition: color 0.5s;
+  }
   & div {
     @include flex( row, space-around);
     width: 300px;
@@ -12,5 +15,7 @@ nav {
     padding: 4px;
     height: 20px;
     text-decoration: none;
+    transition: color 0.5s;
+
   }
 }

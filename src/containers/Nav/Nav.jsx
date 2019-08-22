@@ -20,13 +20,13 @@ export class Nav extends Component {
 		return (
 			<nav>
 				<div className="nav-container">
-					<NavLink name="About"  onClick={this.handleClick} to="/">
+					<NavLink name="About" className={this.props.nav === 'About'? "selected" : null} onClick={this.handleClick} to="/">
 						About
 					</NavLink>
-					<NavLink name="Projects" onClick={this.handleClick} to="/projects">
+					<NavLink name="Projects"className={this.props.nav === 'Projects'? "selected" : null} onClick={this.handleClick} to="/projects">
 						Projects
 					</NavLink>
-					<NavLink name="Notes" onClick={this.handleClick} to="/notes">
+					<NavLink name="Notes" className={this.props.nav === 'Notes'? "selected" : null} onClick={this.handleClick} to="/notes">
 						Notes
 					</NavLink>
 				</div>

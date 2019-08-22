@@ -1,16 +1,16 @@
 nav {
-  background-color: #E0EBE8;
   @include flex( row, flex-end);
-  padding:30px;
+  height: 5%;
+  background-color: inherit;
 
   & div {
     @include flex( row, space-around);
     width: 300px;
-    padding: 10px;
+    margin: auto 0;
   }
   a {
     padding: 4px;
-    color: #4AB19A;
+    height: 20px;
     text-decoration: none;
   }
 }

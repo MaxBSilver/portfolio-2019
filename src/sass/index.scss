@@ -1,20 +1,24 @@
 @import './variables.scss';
 @import './mixins.scss';
-@import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
 @import '../containers/Nav/nav.scss';
 @import '../containers/Main/Main.scss';
 @import '../components/Header/header.scss';
-
+@import '../containers/App/app.scss';
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
-
-
-  // background-color: #243B52;
-
   outline: red 1px solid;
+  color: #C7C9DA;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+}
+#root {
+  height: 100%;
+  width: 100%;
 }
 
 li {

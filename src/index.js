@@ -9,6 +9,7 @@ import { rootReducer } from './redux/reducers/index';
 import { BrowserRouter as Router} from 'react-router-dom';
 
 const store = createStore(rootReducer, composeWithDevTools());
+
 ReactDOM.render(
 	<Router>
 		<Provider store={store}>

@@ -1,24 +1,45 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-export default class Nav extends Component {
-	constructor (props) {
-		super(props);
+import { connect } from 'react-redux';
+import { updateNav } from '../../redux/actions/index';
 
-		this.state = {};
+export class Nav extends Component {
+
+
+	componentDidMount () {
+		console.log(this.props)
+		console.log(updateNav)
 	}
-
-	componentDidMount () {}
+	handleClick = e => {
+	
+		this.props.updateNav(e.target.name)
+	};
 
 	render () {
 		//TODO setup react-router and convert links
 		return (
 			<nav>
 				<div className="nav-container">
-					<NavLink to="/">About</NavLink>
-					<NavLink to="/projects">Projects</NavLink>
-					<NavLink to="/notes">Notes</NavLink>
+					<NavLink name="About"  onClick={this.handleClick} to="/">
+						About
+					</NavLink>
+					<NavLink name="Projects" onClick={this.handleClick} to="/projects">
+						Projects
+					</NavLink>
+					<NavLink name="Notes" onClick={this.handleClick} to="/notes">
+						Notes
+					</NavLink>
 				</div>
 			</nav>
 		);
 	}
 }
+export const mapStateToProps = state => ({
+	nav: state.nav
+});
+
+export const mapDispatchToProps = dispatch => ({
+	updateNav: name => dispatch(updateNav(name))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Nav);

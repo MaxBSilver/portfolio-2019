@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import Header from '../../components/Header/Header';
 export class Main extends Component {
-	constructor (props) {
-		super(props);
 
-		this.state = {};
-	}
 
-	componentDidMount () {}
+	componentDidMount () {
+    console.log(this.props)
+  }
 
 	render () {
 		return (

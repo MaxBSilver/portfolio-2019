@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import Header from '../Header/Header';
 
 export class About extends Component {
   render() {
     return (
       <div className="about-container">
-        <h1>About</h1>
+        <Header componentName={'About'}> </Header>
         <section></section>
         
       </div>

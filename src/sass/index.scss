@@ -4,12 +4,13 @@
 @import '../containers/Nav/nav.scss';
 @import '../containers/Main/Main.scss';
 @import '../components/Header/header.scss';
+@import '../components/About/about.scss';
 @import '../containers/App/app.scss';
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  outline: red 1px solid;
+  // outline: red 1px solid;
   color: #C7C9DA;
 }
 body {

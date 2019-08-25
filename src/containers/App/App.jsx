@@ -3,12 +3,14 @@ import Nav from '../Nav/Nav';
 import '../../sass/index.scss';
 import Main from '../Main/Main';
 import { Route } from 'react-router-dom';
-
+import About from '../../components/About/About';
 const App = () => {
 	return (
 		<div className="App">
 			<Nav />
 			<Route exact path="/" component={Main} />
+			<Route path="/about" component={About} />
+
 		</div>
 	);
 };

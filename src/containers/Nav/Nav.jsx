@@ -7,12 +7,14 @@ export class Nav extends Component {
 
 
 	componentDidMount () {
-		console.log(this.props)
-		console.log(updateNav)
-	}
-	handleClick = e => {
 	
+	}
+
+	handleClick = e => {
+		console.log(this.props)
 		this.props.updateNav(e.target.name)
+		localStorage.setItem('nav', e.target.name)
+		console.log(localStorage)
 	};
 
 	render () {

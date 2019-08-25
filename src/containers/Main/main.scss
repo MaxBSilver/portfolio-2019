@@ -1,34 +1,34 @@
 main {
   height: 95%;
-  @include flex(row, center);
+  @include flex(column, center);
   align-items: center;
-  animation: fadeIn 0.35s forwards;
   & div {
     @include inheritHW;
     text-align: center;
     font-weight: lighter;
-    padding: 10px;
        & h1 {
+         animation: fadeIn 0.45s forwards;
+         color: #38A487;
          font-size: 60px;
-         & span {
-           color: rgb(175, 222, 252);
-         }
+         padding-bottom: 10px;
        }
        & h2 {
+        animation: fadeIn 0.45s forwards;
+         padding-top: 10px;
          font-size: 22px;
+         color: #38A487;
        }
   }
-
-  & .main-top, .main-bottom {
-    height: 50%;
-    
-  }
-  & .main-top {
-    align-items: flex-end;
+    & .main-top {
+    align-items:flex-end;
     @include flex(row, center);
+    background-color: #E0EBE8;
+    height: 30%;
   }
-  & .main-bottom {
-    background-color: rgb(35, 36, 44);
+    & .main-bottom {
+      background-color: rgb(255, 255, 255);
+      height: 70%;
+
   }
 }
 

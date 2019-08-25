@@ -6,7 +6,7 @@ export class Main extends Component {
 			<main>
 				<div className="main-parent-container">
 					<div className="main-top">
-						<h1>I'm Max</h1>
+						<h1>I'm <span>Max</span></h1>
 					</div>
 					<div className="main-bottom">
 						<h2>a software engineer</h2>

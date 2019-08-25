@@ -1,2 +1,6 @@
 header {
+  @include flex(row, center);
+  padding:20px;
+  font-size: 40px;
+  font-weight: lighter;
 }

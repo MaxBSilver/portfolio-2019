@@ -6,8 +6,9 @@ export class About extends Component {
     return (
       <div className="about-container">
         <Header componentName={'About'}> </Header>
-        <section></section>
-        
+        <section className="about-section" >a</section>
+        <section className="about-section" >b</section>
+        <section className="about-section" >c</section>
       </div>
     )
   }

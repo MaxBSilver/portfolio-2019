@@ -1,0 +1,8 @@
+.about-container {
+  animation: fadeIn 0.35s forwards;
+
+  & section {
+    height: 50%;
+
+  }
+}

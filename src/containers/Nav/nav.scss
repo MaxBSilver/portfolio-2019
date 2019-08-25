@@ -2,7 +2,6 @@ nav {
   @include flex( row, flex-end);
   height: 5%;
   background-color: #E0EBE8;
-  font-size: 18px;
   & .selected {
     color: #265B4F;
     transition: color 0.5s, text-decoration;

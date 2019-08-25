@@ -3,7 +3,6 @@
   overflow: scroll;
   @include inheritHW();
   & div {
-    height: 50%;
     & img {
       opacity: 0.3;
       @include inheritHW();
@@ -11,7 +10,6 @@
     }
   }
   & section {
-    height: 50%;
-
+    height: 35%;
   }
 }

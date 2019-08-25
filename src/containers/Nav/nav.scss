@@ -4,7 +4,7 @@ nav {
   background-color: inherit;
   & .selected {
     color: rgb(255, 162, 101);
-    transition: color 0.5s;
+    transition: color 0.5s, text-decoration;
   }
   & div {
     @include flex( row, space-around);

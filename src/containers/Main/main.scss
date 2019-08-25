@@ -3,10 +3,11 @@ main {
   @include flex(row, center);
   align-items: center;
   & div {
-    width: 400px;
+    // width: 400px;
+    @include inheritHW;
     text-align: center;
     font-weight: lighter;
-    outline: #C7C9DA 3px solid;
+    // outline: #C7C9DA 3px solid;
     padding: 10px;
        & h1 {
          font-size: 60px;
@@ -14,5 +15,16 @@ main {
        & h2 {
          font-size: 22px;
        }
+  }
+  & .main-top, .main-bottom {
+    height: 50%;
+    
+  }
+  & .main-top {
+    align-items: flex-end;
+    @include flex(row, center);
+  }
+  & .main-bottom {
+    background-color: rgb(35, 36, 44);
   }
 }

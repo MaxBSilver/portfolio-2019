@@ -1,6 +1,15 @@
 .about-container {
   animation: fadeIn 0.35s forwards;
-
+  overflow: scroll;
+  @include inheritHW();
+  & div {
+    height: 50%;
+    & img {
+      opacity: 0.3;
+      @include inheritHW();
+      object-fit: cover;
+    }
+  }
   & section {
     height: 50%;
 

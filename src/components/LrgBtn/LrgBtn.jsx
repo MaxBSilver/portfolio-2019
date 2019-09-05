@@ -11,8 +11,10 @@ export class LrgButton extends Component {
 	render () {
 		return (
 			<div className="lrg-btn">
-				<NavLink onClick={this.handleClick}  to={this.props.btnName}>
-					<button name={this.props.btnName}>{this.props.btnName}</button>
+				<NavLink onClick={this.handleClick} to={this.props.btnName}>
+					<button name={this.props.btnName}>
+						<span>{this.props.btnName}</span>
+					</button>
 				</NavLink>
 			</div>
 		);

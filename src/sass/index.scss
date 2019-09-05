@@ -7,7 +7,8 @@
 @import '../components/About/about.scss';
 @import '../containers/App/app.scss';
 @import '../components/Header/header.scss';
-
+@import '../components/Projects/projects.scss';
+@import '../components/Notes/notes.scss';
 * {
   box-sizing: border-box;
   padding: 0;
@@ -26,3 +27,4 @@ body {
 li {
   list-style: none;
 }
+

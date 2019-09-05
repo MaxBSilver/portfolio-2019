@@ -1,5 +1,4 @@
 .about-container {
-  overflow: scroll;
   height: 95vh;
   & .header-main {
     background-color: #E0EBE8;
@@ -13,17 +12,22 @@
   
   }
     & .abt-sec-1 {
+      animation: fadeIn 0.35s forwards;
       @include flex(column, center);
       align-items: center;
+      h3 {
+        font-size: 35px;
+      }
       & p {
         text-align: center;
-        font-size: 20px;
-        width: 70%;
+        font-size: 19px;
+        // width: 70%;
       }
     }
+    & .abt-sec-2 {
+    }
   & section {
-    overflow: auto;
-    height: 40%;
+    padding: 20px;
     color: #38A487;
     & img {
       height: 160px;

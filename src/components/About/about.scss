@@ -1,14 +1,10 @@
 .about-container {
   height: 95vh;
-  & .header-main {
-    height: 30%;
-  
-  }
+
   & div {
     & h2 {
       animation: fadeIn 0.35s forwards;
     }
-  
   }
     & .abt-sec-1 {
       animation: fadeIn 0.35s forwards;
@@ -20,11 +16,9 @@
       & p {
         text-align: center;
         font-size: 19px;
-        // width: 70%;
       }
     }
-    & .abt-sec-2 {
-    }
+  
   & section {
     padding: 20px;
     color: #38A487;

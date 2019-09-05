@@ -6,11 +6,13 @@ header {
   font-weight: lighter;
   color: #38A487;
   width: 100%;
-  background-color: #E0EBE8;
 
 }
 
  .header-main {
   @include flex(row, center);
   align-items: flex-end;
+  background-color: #E0EBE8;
+  height: 24%;
+
 }

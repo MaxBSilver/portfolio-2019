@@ -23,7 +23,7 @@ main {
     align-items:flex-end;
     @include flex(row, center);
     background-color: #E0EBE8;
-    height: 30%;
+    height: 25%;
   }
     & .main-bottom {
       background-color: rgb(255, 255, 255);

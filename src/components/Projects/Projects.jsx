@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 export class Projects extends Component {
   render() {
     return (
-      <div className="Projects">
+      <div className="projects">
         <Header componentName={'Projects'}/>        
       </div>
     )

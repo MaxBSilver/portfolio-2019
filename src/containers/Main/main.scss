@@ -30,5 +30,9 @@ main {
       height: 70%;
 
   }
+  & .main-btn-cntr {
+    @include flex(center, row);
+    @include inheritHW();
+  }
 }
 

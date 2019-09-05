@@ -4,19 +4,11 @@ import { connect } from 'react-redux';
 import { updateNav } from '../../redux/actions/index';
 
 export class Nav extends Component {
-
-
-	componentDidMount () {
-	
-	}
-
 	handleClick = e => {
-		console.log(this.props)
 		this.props.updateNav(e.target.name)
 		localStorage.setItem('nav', e.target.name)
-		console.log(localStorage)
 	};
-
+	
 	render () {
 		//TODO setup react-router and convert links
 		return (

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LrgButton from '../../components/LrgBtn/LrgBtn';
 export class Main extends Component {
 
 	render () {
@@ -10,6 +11,10 @@ export class Main extends Component {
 					</div>
 					<div className="main-bottom">
 						<h2>a software engineer</h2>
+						<section className="main-btn-cntr">
+							<LrgButton btnName={"About"} />
+
+						</section>
 					</div>
 				</div>
 			</main>

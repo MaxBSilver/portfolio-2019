@@ -7,13 +7,13 @@ main {
     text-align: center;
     font-weight: lighter;
        & h1 {
-         animation: fadeIn 0.45s forwards;
+         animation: fadeIn 0.75s forwards;
          color: #38A487;
          font-size: 60px;
          padding-bottom: 10px;
        }
        & h2 {
-        animation: fadeIn 0.45s forwards;
+        animation: fadeIn 0.75s forwards;
          padding-top: 10px;
          font-size: 22px;
          color: #38A487;
@@ -23,7 +23,7 @@ main {
     align-items:flex-end;
     @include flex(row, center);
     background-color: #E0EBE8;
-    height: 25%;
+    height: 24%;
   }
     & .main-bottom {
       background-color: rgb(255, 255, 255);

@@ -3,11 +3,11 @@
 
   & div {
     & h2 {
-      animation: fadeIn 0.35s forwards;
+      animation: fadeIn 0.75s forwards;
     }
   }
     & .abt-sec-1 {
-      animation: fadeIn 0.35s forwards;
+      animation: fadeIn 0.75s forwards;
       @include flex(column, center);
       align-items: center;
       h3 {
@@ -20,6 +20,8 @@
     }
   
   & section {
+    animation: fadeIn 0.75s forwards;
+
     padding: 20px;
     color: #38A487;
     & img {

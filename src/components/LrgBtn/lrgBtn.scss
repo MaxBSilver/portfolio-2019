@@ -2,23 +2,20 @@
   @include flex(row, center);
   align-items: center;
   & button {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     color: #38A487;
     font-size: 18px;
     border: #38A487 2px solid;
     background-color: #E0EBE8;
     transition: background-color 1s, color 1s;
-
-
- 
+    background-size: cover;
   }
   & button:hover {
     background-color: #38A487;
     color: #E0EBE8;
-
     transition: background-color 1s, color 1s;
-
+    
   }
 }

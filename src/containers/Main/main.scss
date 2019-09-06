@@ -2,6 +2,13 @@ main {
   height: 95%;
   @include flex(column, center);
   align-items: center;
+  & img {
+    object-fit: contain;
+    width: 100%;
+  }
+  .icon-container {
+    padding: 20px;
+  }
   & div {
     @include inheritHW;
     text-align: center;

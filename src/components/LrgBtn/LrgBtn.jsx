@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { updateNav } from '../../redux/actions/index';
-import About from '../../assets/fort.png' ;
 
 export class LrgButton extends Component {
 
@@ -15,7 +14,7 @@ export class LrgButton extends Component {
 		return (
 			<div className="lrg-btn">
 				<NavLink onClick={this.handleClick} to={this.props.btnName }>
-					<button name={this.props.btnName} style={{backgroundImage: `url(${About})`, backgroundPosition: 'center'}}>
+					<button name={this.props.btnName}>
 						<span>{this.props.btnName}</span>
 					</button>
 				</NavLink>

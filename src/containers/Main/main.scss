@@ -4,25 +4,23 @@ main {
   align-items: center;
 
   & div {
-    animation: fadeIn 0.95 forwards;
     @include inheritHW;
     text-align: center;
     font-weight: lighter;
        & h1 {
-         animation: fadeIn 0.95 forwards;
+         animation: fadeIn 0.95s forwards;
          color: #38A487;
          font-size: 60px;
          padding-bottom: 10px;
        }
        & h2 {
-        animation: fadeIn 0.95 forwards;
+        animation: fadeIn 0.95s forwards;
          padding-top: 10px;
          font-size: 22px;
          color: #38A487;
        }
   }
     & .main-top {
-    animation: fadeIn 0.95 forwards;
     align-items:flex-end;
     @include flex(row, center);
     background-color: #E0EBE8;
@@ -37,10 +35,12 @@ main {
       & img {
         object-fit: contain;
         max-height: 100%;
+        animation: fadeIn 0.95s forwards;
+
       }    
       & .icon-container {
         @include flex(row, space-around);
-        animation: fadeIn 0.95 forwards;
+        animation: fadeIn 0.95s forwards;
         padding:20px 0;
         width: 200px;
         & svg {

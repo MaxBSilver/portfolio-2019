@@ -2,43 +2,64 @@ main {
   height: 95%;
   @include flex(column, center);
   align-items: center;
-  & img {
-    object-fit: contain;
-    width: 100%;
-  }
-  .icon-container {
-    padding: 20px;
-  }
+
   & div {
+    animation: fadeIn 0.95 forwards;
     @include inheritHW;
     text-align: center;
     font-weight: lighter;
        & h1 {
-         animation: fadeIn 0.75s forwards;
+         animation: fadeIn 0.95 forwards;
          color: #38A487;
          font-size: 60px;
          padding-bottom: 10px;
        }
        & h2 {
-        animation: fadeIn 0.75s forwards;
+        animation: fadeIn 0.95 forwards;
          padding-top: 10px;
          font-size: 22px;
          color: #38A487;
        }
   }
     & .main-top {
+    animation: fadeIn 0.95 forwards;
     align-items:flex-end;
     @include flex(row, center);
     background-color: #E0EBE8;
     height: 24%;
   }
     & .main-bottom {
+      @include flex(column, center);
+      align-items: center;
       background-color: rgb(255, 255, 255);
-      height: 70%;
+      height: 76%;
+      overflow: hidden;
+      & img {
+        object-fit: contain;
+        max-height: 100%;
+      }    
+      & .icon-container {
+        @include flex(row, space-around);
+        animation: fadeIn 0.95 forwards;
+        padding:20px 0;
+        width: 200px;
+        & svg {
+        font-size: 30px;
+        transition: color 0.5s;
+
+         color: #38A487;
+
+        }
+        & svg:hover {
+          color: #265B4E;
+          transition: color 0.5s;
+        }
+    
+      }
 
   }
   & .main-btn-cntr {
-    @include flex(center, row);
+    @include flex(row, center);
     @include inheritHW();
   }
 }

@@ -21,12 +21,16 @@
   
   & section {
     animation: fadeIn 0.75s forwards;
-
+    & h3 {
+      padding: 10px 0;
+    }
     padding: 20px;
     color: #38A487;
     & img {
       height: 160px;
       width: 160px;
+      border-radius:50%;
+      border: #F37054 solid 4px;
     }
   }
 }

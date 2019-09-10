@@ -1,6 +1,7 @@
 nav {
   @include flex( row, space-between);
-  height: 5%;
+  height: 10%;
+  z-index: 2;
   & h3 {
     padding: 4px;
     font-size: 28px;
@@ -20,7 +21,7 @@ nav {
     text-decoration: none;
     transition: color 0.5s;
     font-size: 20px;
-    color: black;
+    color: rgb(32, 32, 32);
 
   }
   a:hover { 

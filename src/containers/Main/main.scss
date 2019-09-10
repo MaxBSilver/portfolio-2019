@@ -1,63 +1,60 @@
 main {
-  height: 95%;
+  height: 90%;
   @include flex(row, center);
   align-items: center;
   width:100%;
-
   & .main-parent-container {
     @include flex(column, center);
     align-items: center;
-
     animation: fadeIn 3s forwards;
     @include inheritHW();
     & .info-container {
+      @include flex(row, space-between);
+      width: 100%;
+      height: 100%;
       & span {
         font-size: 1.4em;
-        width: 300px;
         line-height: 32px;
         & span {
           font-size: 1.1em;
         }
       }
-      height: 40%;
-      width: 600px;
-      @include flex(column, center);
       & section {
-      height: 150px;
-
-        @include flex(column, space-between);
-        width: 400px;
+        height: 55%;
+        @include flex(column, space-around);
+        max-width:350px;
+        padding: 30px;
           & div {
-            width: 200px;
+            width: 100%;
           }
-      }
+        }
       & div {
         font-size: 30px;
-        display: flex;
-        justify-content: space-around;
         & a {
           color: #F26565;
           padding: 10px 12px;
-          border: 2px solid #F26565;
+          border: 3px solid rgb(226, 226, 226);
           border-radius: 50%;
           transition: background-color 0.3s;
+          margin-right: 20px;
 
         }
         & a:hover {
           background-color: rgb(243, 243, 243);
           transition: background-color 0.3s;
+          
         }
       }
     }
    & .image-container {
-    @include flex(column, flex-end);
+    @include flex(column, flex-start);
     overflow: hidden;
-    height: 45%;
-    max-width: 1200px;
+    height: 100%;
+    // max-width: 1200px;
     width:100%;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: bottom right;
     }
   }
 

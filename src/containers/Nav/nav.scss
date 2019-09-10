@@ -1,9 +1,8 @@
 nav {
   @include flex( row, flex-end);
   height: 5%;
-  background-color: #E0EBE8;
   & .selected {
-    color: #265B4F;
+    color: rgb(150, 149, 204);
     transition: color 0.5s, text-decoration;
   }
   & div {
@@ -16,11 +15,12 @@ nav {
     height: 20px;
     text-decoration: none;
     transition: color 0.5s;
-    color: rgb(86, 181, 155);
+    font-size: 20px;
+    color: rgb(179, 179, 223);
 
   }
-  a:hover{ 
-    color: rgb(40, 97, 84);
+  a:hover { 
+    color: rgb(150, 149, 204);
     transition: color 0.5s;
   }
 }

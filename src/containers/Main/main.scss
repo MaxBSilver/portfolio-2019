@@ -3,22 +3,33 @@ main {
   @include flex(row, center);
   align-items: center;
   width:100%;
-  & h1 {
-    font-size: 4em;
-  }
+
   & .main-parent-container {
     @include flex(column, center);
+    align-items: center;
+
     animation: fadeIn 3s forwards;
     @include inheritHW();
     & .info-container {
+      & span {
+        font-size: 1.4em;
+        width: 300px;
+        line-height: 32px;
+        & span {
+          font-size: 1.1em;
+        }
+      }
       height: 40%;
+      width: 600px;
       @include flex(column, center);
-      align-items: center;
       & section {
-        transform: translateX(20%);
-        height: 200px;
-        @include flex(column, space-between);
+      height: 150px;
 
+        @include flex(column, space-between);
+        width: 400px;
+          & div {
+            width: 200px;
+          }
       }
       & div {
         font-size: 30px;
@@ -26,18 +37,27 @@ main {
         justify-content: space-around;
         & a {
           color: #F26565;
-          padding: 5px;
+          padding: 10px 12px;
+          border: 2px solid #F26565;
+          border-radius: 50%;
+          transition: background-color 0.3s;
+
+        }
+        & a:hover {
+          background-color: rgb(243, 243, 243);
+          transition: background-color 0.3s;
         }
       }
     }
    & .image-container {
     @include flex(column, flex-end);
     overflow: hidden;
-    height: 60%;
+    height: 45%;
+    max-width: 1200px;
     width:100%;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
     }
   }
 

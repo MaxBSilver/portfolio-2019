@@ -1,6 +1,11 @@
 nav {
-  @include flex( row, flex-end);
+  @include flex( row, space-between);
   height: 5%;
+  & h3 {
+    padding: 4px;
+    font-size: 28px;
+    margin: auto 0;
+  }
   & .selected {
     color: #F26565;
     transition: color 0.5s, text-decoration;
@@ -12,7 +17,6 @@ nav {
   }
   a {
     padding: 4px;
-    height: 20px;
     text-decoration: none;
     transition: color 0.5s;
     font-size: 20px;

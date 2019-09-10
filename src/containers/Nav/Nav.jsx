@@ -13,6 +13,7 @@ export class Nav extends Component {
 		//TODO setup react-router and convert links
 		return (
 			<nav>
+				<h3>Max Silver</h3>
 				<div className="nav-container">
 					<NavLink name="Home" className={this.props.nav === 'Home'? "selected" : null} onClick={this.handleClick} to="/">
 						Home

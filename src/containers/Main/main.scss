@@ -6,19 +6,44 @@ main {
   & .main-parent-container {
     @include flex(row, center);
     animation: fadeIn 3s forwards;
-    height: 100%;
+    @include inheritHW();
     & .info-container {
+    @include flex(column, center);
       width: 30%;
     }
    & .image-container {
     @include flex(column, flex-end);
-    overflow: visible;
+    overflow: hidden;
       min-width:70%;
       & img {
-       object-fit: cover;
+       object-fit: contain;
        width: 100%;
       }
     }
   }
 
+}
+
+@media only screen and (max-width: 750px) {
+  .main-parent-container {
+    flex-direction: column !important;
+    & .image-container {
+      height: 70%;
+      & img {
+        height: 100%;
+        min-width: 600px;
+        margin-right: 50%;
+      }
+    }
+    & .info-container {
+      height: 30%;
+    }
+  }
+}
+@media only screen and (max-width: 400px) {
+  .image-container {
+    & img {
+      margin-left: -35%;
+    }
+  }
 }

@@ -5,31 +5,32 @@ import { updateNav } from '../../redux/actions/index';
 import { slide as Menu } from 'react-burger-menu';
 
 export class Nav extends Component {
+	constructor (props) {
+		super(props);
+		this.state = {
+			menuOpen: false
+		};
+	}
+
 	handleClick = e => {
-		this.props.updateNav(e.target.name);
 		localStorage.setItem('nav', e.target.name);
-	
+		this.setState({ menuOpen: false });
+		this.props.updateNav(e.target.name);
 	};
+	handleStateChange (state) {
+    this.setState({menuOpen: state.isOpen})  
+  }
 
 	render () {
-		//TODO setup react-router and convert links
 		return (
 			<nav>
-				{/* <h3>Max Silver</h3> */}
-				{/* <div className="nav-container"> */}
-				{/* <NavLink name="Home" className={this.props.nav === 'Home'? "selected" : null} onClick={this.handleClick} to="/">
-						Home
-					</NavLink>
-					<NavLink name="About" className={this.props.nav === 'About'? "selected" : null} onClick={this.handleClick} to="/about">
-						About
-					</NavLink>
-					<NavLink name="Projects"className={this.props.nav === 'Projects'? "selected" : null} onClick={this.handleClick} to="/projects">
-						Projects
-					</NavLink>
-					<NavLink name="Notes" className={this.props.nav === 'Notes'? "selected" : null} onClick={this.handleClick} to="/notes">
-						Notes
-					</NavLink> */}
-				<Menu disableOverlayClick isOpen={false} right width={240}>
+				<span className="logo">Max Silver</span>
+				<Menu
+					disableOverlayClick
+					isOpen={this.state.menuOpen}
+					onStateChange={state => this.handleStateChange(state)}
+					right
+					width={240}>
 					<NavLink
 						name="Home"
 						className={this.props.nav === 'Home' ? 'selected' : null}
@@ -59,7 +60,6 @@ export class Nav extends Component {
 						Notes
 					</NavLink>
 				</Menu>
-				{/* </div> */}
 			</nav>
 		);
 	}

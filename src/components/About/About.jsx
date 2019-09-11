@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
-import portfolio from '../../assets/fort.png';
+import coding from '../../assets/codingisometric-2.png';
 export class About extends Component {
 	render () {
 		return (
@@ -8,7 +8,7 @@ export class About extends Component {
 				<Header componentName={'About'}> </Header>
 				<section className="about-section abt-sec-1">
 					<div>
-						<img src={portfolio} alt="Portfolio icon" />
+						<img src={coding} alt="Portfolio icon" />
 					</div>
           <h3>Who am I?</h3>
 

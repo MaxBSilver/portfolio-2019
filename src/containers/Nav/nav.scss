@@ -2,6 +2,7 @@ nav {
   height: 10%;
   z-index: 2;
   align-content: center;
+  animation: fadeIn 2s;
   // & h3 {
   //   padding: 4px;
   //   font-size: 28px;
@@ -9,24 +10,34 @@ nav {
   // }
   & .selected {
     color: #3F8EE1;
-    transition: color 0.5s, text-decoration;
+    transition: transform 0.5s, color 0.5s;
+
   }
   // & div {
   //   @include flex( row, space-around);
   //   width: 300px;
   //   margin: auto 0;
   // }
-  a {
-    padding: 4px;
+  & span {
+    font-weight: bold;
+    letter-spacing:3px;
+    border-bottom: 2px solid white;
+  }
+
+  & a {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    padding: 20px 0px;
+    font-size: 26px;
+    font-weight:lighter;
     text-decoration: none;
-    transition: color 0.5s;
-    font-size: 20px;
+    transition: transform 0.5s;
     color: rgb(32, 32, 32);
 
   }
-  a:hover { 
-    color: #3F8EE1;
-    transition: color 0.5s;
+  & a:hover { 
+    transform: translateX(10px);
+    transition: transform 0.5s;
   }
 }
 
@@ -43,7 +54,7 @@ nav {
   width: 22px;
   height: 20px;
   right: 14px;
-  top: 17px;
+  top: 24px;
   transition: color 0.5s;
 
   & button:focus {

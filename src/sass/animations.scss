@@ -6,3 +6,10 @@
     opacity: 1;
   }
 }
+
+@keyframes slideOut {
+ 
+  to {
+    translate: transformX(30px)
+  }
+}

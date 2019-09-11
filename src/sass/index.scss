@@ -1,6 +1,8 @@
 @import './variables.scss';
 @import './animations.scss';
 @import './mixins.scss';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400&display=swap');
+
 @import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
 @import '../containers/Nav/nav.scss';
 @import '../containers/Main/Main.scss';
@@ -10,7 +12,6 @@
 @import '../components/Projects/projects.scss';
 @import '../components/Notes/notes.scss';
 @import '../components/LrgBtn/lrgBtn.scss';
-
 * {
   box-sizing: border-box;
   padding: 0;

@@ -18,19 +18,20 @@ export class Nav extends Component {
 		this.props.updateNav(e.target.name);
 	};
 	handleStateChange (state) {
-    this.setState({menuOpen: state.isOpen})  
-  }
+		this.setState({ menuOpen: state.isOpen });
+	}
 
 	render () {
 		return (
 			<nav>
-				<span className="logo">Max Silver</span>
+				<span className="logo"></span>
 				<Menu
 					disableOverlayClick
 					isOpen={this.state.menuOpen}
 					onStateChange={state => this.handleStateChange(state)}
 					right
 					width={240}>
+					<span>MENU</span>
 					<NavLink
 						name="Home"
 						className={this.props.nav === 'Home' ? 'selected' : null}

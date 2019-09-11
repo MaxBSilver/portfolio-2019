@@ -23,6 +23,7 @@ export class Main extends Component {
 				<div className="main-parent-container">
 					<section className="info-container image-container" style={{ backgroundImage: `url(${background})` }}>
 						<section>
+							<h2>Hi! I'm Max.</h2>
 							<span>
 								I build applications <br /> with{' '}
 								<span
@@ -33,7 +34,7 @@ export class Main extends Component {
 								/>
 							</span>
 							<p>
-								Developer primarily leveraging JavaScript to creatively build dynamic applications that are both responsive
+								I'm a developer primarily leveraging JavaScript to creatively build dynamic applications that are both responsive
 								and intuitive.
 							</p>
 							<div>

@@ -11,7 +11,7 @@
   }
   & p {
     font-size: 16px;
-    padding: 5px;
+    padding: 10px;
     color: rgb(241, 241, 241);
     background-color: rgba(197, 197, 197,0.4);
     border-radius: 5px;
@@ -24,7 +24,31 @@
       height: 30%;
     }
     & .abt-sec-2 {
+      @include flex(column, space-around);
       height: 30%;
+      color: #10ACEE;
+      background: linear-gradient(to right bottom, rgb(255, 255, 255) 70%, rgb(245, 245, 245)   30%);
+      & div {
+      @include flex(row, space-around);
+      height: 75%;
+
+      }
+      & p {
+        width: 60%;
+        color: rgb(46, 46, 46);
+      }
+      & .icon-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 50%;
+        height: 100%;
+      }
+      & svg {
+        font-size: 45px;
+        margin-left: 10px;
+      }
 
     }
     & .abt-sec-3 {
@@ -49,6 +73,33 @@
     }
   }
 }
+
+.amazon {
+  color: green;
+}
+.node {
+  color: rgb(22, 102, 22);
+}
+.vue {
+  color : rgb(41, 83, 28);
+}
+.sass {
+  color : rgb(255, 162, 178);
+}
+.less {
+  color: rgb(79, 105, 255);
+}
+.github {
+  color: black;
+}
+.amazon {
+  color: orange;
+}
+.react {
+  color: rgb(0, 162, 255);
+}
+
+
 @media only screen and (max-width: 700px) {
   .abt-sec-1 {
     flex-direction: column !important;
@@ -56,3 +107,4 @@
   }
 
 }
+

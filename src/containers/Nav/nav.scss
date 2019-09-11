@@ -1,21 +1,21 @@
 nav {
-  @include flex( row, space-between);
+  @include flex( row, flex-end);
   height: 10%;
   z-index: 2;
-  & h3 {
-    padding: 4px;
-    font-size: 28px;
-    margin: auto 0;
-  }
+  // & h3 {
+  //   padding: 4px;
+  //   font-size: 28px;
+  //   margin: auto 0;
+  // }
   & .selected {
-    color: #F26565;
+    color: #3F8EE1;
     transition: color 0.5s, text-decoration;
   }
-  & div {
-    @include flex( row, space-around);
-    width: 300px;
-    margin: auto 0;
-  }
+  // & div {
+  //   @include flex( row, space-around);
+  //   width: 300px;
+  //   margin: auto 0;
+  // }
   a {
     padding: 4px;
     text-decoration: none;
@@ -25,7 +25,95 @@ nav {
 
   }
   a:hover { 
-    color: #F26565;
+    color: #3F8EE1;
     transition: color 0.5s;
   }
+}
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  float: right;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: rgb(219, 219, 219);
+  transition: background-color 0.5s;
+
+}
+
+.bm-cross:focus {
+  outline: none;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  & button:hover {
+    color: #3F8EE1;
+    transition: color 0.5s;
+  }
+  & button {
+
+  }
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+  @include flex(column, flex-start)
+
+}
+
+/* Individual item */
+.bm-item {
+  color: white;
+  display: inline-block;
+  padding: 10px 0;
+  align-self: center;
+}
+.bm-item:focus {
+  outline: none;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }

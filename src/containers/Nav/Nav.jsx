@@ -24,7 +24,38 @@ export class Nav extends Component {
 	render () {
 		return (
 			<nav>
-				<span className="logo"></span>
+				<span className="logo" />
+				<section>
+					<NavLink
+						name="Home"
+						className={this.props.nav === 'Home' ? 'selected' : null}
+						onClick={this.handleClick}
+						to="/">
+						Home
+					</NavLink>
+					<NavLink
+						name="About"
+						className={this.props.nav === 'About' ? 'selected' : null}
+						onClick={this.handleClick}
+						to="/about">
+						About
+					</NavLink>
+					<NavLink
+						name="Projects"
+						className={this.props.nav === 'Projects' ? 'selected' : null}
+						onClick={this.handleClick}
+						to="/projects">
+						Projects
+					</NavLink>
+					<NavLink
+						name="Notes"
+						className={this.props.nav === 'Notes' ? 'selected' : null}
+						onClick={this.handleClick}
+						to="/notes">
+						Notes
+					</NavLink>
+				</section>
+
 				<Menu
 					disableOverlayClick
 					isOpen={this.state.menuOpen}

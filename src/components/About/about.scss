@@ -1,6 +1,11 @@
 .about-container {
   height: 95vh;
-
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 5%, #FBFBFC 10%);
+  overflow: scroll;
+  & img {
+    width: 65px;
+    margin-right: 10px;
+  }
   & div {
     & h2 {
       animation: fadeIn 0.75s forwards;
@@ -8,6 +13,11 @@
   }
   h6 {
     font-size: 28px;
+    color: rgb(82, 82, 82);
+    align-content: center;
+    display: flex;
+    align-items: center;
+  
   }
   & p {
     font-size: 16px;
@@ -15,46 +25,31 @@
     color: rgb(29, 29, 29);
     border-radius: 5px;
     max-width: 550px;
+    line-height: 20px;
   }
     & .abt-sec-1 {
       animation: fadeIn 0.75s forwards;
       @include flex(row, center);
       align-items: center;
-      & img {
-        height: 150px;
-        object-fit:cover;
-        width: 150px;
-        border-radius:50%;
-      }
-      & h6 {
-        color: rgb(189, 118, 247);
-      }
+      
       & p {
-          background-color: rgba(226, 169, 252, 0.4);
+        background-color: rgba(192, 192, 192, 0.4);
 
       }
     }
     & .abt-sec-2 {
-      @include flex(column, space-around);
-      color: #10ACEE;
-      & div {
-          @include flex(row, space-around);
-
-      }
+   
       & p {
-        width: 60%;
-        height: 80px;
         color: rgb(46, 46, 46);
-        background-color: rgba(129, 205, 255, 0.4);
-
+        background-color: rgba(192, 192, 192, 0.4);
       }
       & .icon-container {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        width: 50%;
         height: 100%;
+        padding: 20px;
         & img {
           height: 100%;
           width: 100%;
@@ -62,19 +57,27 @@
       }
       & svg {
         font-size: 45px;
-        margin-left: 10px;
+        margin: 10px;
       }
 
     }
     & .abt-sec-3 {
-      height: 30%;
-      background: linear-gradient(to right bottom, #F16244 70%, rgb(231, 97, 70)   30%);
+     
+      & p {
+        color: rgb(46, 46, 46);
+        background-color: rgba(192, 192, 192, 0.4);
+      }
     }
 
   
   & section {
     animation: fadeIn 0.75s forwards;
-    min-height: 340px;
+    & div {
+      & div {
+        @include flex(row, flex-start);
+        margin-bottom: 15px;
+      }
+    }
     & h3 {
       padding: 10px 0;
     }
@@ -117,7 +120,6 @@
   }
   .abt-sec-2 {
     & div {
-    flex-direction: column !important;
     & p {
       width: 100% !important;
     }

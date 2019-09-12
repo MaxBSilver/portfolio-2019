@@ -12,7 +12,7 @@
   & p {
     font-size: 16px;
     padding: 10px;
-    color: rgb(241, 241, 241);
+    color: rgb(29, 29, 29);
     border-radius: 5px;
     max-width: 550px;
   }
@@ -20,24 +20,23 @@
       animation: fadeIn 0.75s forwards;
       @include flex(row, center);
       align-items: center;
-      background: linear-gradient(to right bottom, #05ABEC 70%, rgb(4, 162, 224)  30%);
-      height: 40%;
       & img {
         height: 150px;
         object-fit:cover;
         width: 150px;
         border-radius:50%;
       }
+      & h6 {
+        color: rgb(189, 118, 247);
+      }
       & p {
-          background-color: rgba(197, 197, 197,0.4);
+          background-color: rgba(226, 169, 252, 0.4);
 
       }
     }
     & .abt-sec-2 {
       @include flex(column, space-around);
-      height: 50%;
       color: #10ACEE;
-      // background: linear-gradient(to right bottom, rgb(255, 255, 255) 70%, rgb(245, 245, 245)   30%);
       & div {
           @include flex(row, space-around);
 

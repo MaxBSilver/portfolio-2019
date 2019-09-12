@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
-import about from '../../assets/about.png';
-import about2 from '../../assets/ravno.png';
+// import about from '../../assets/about.png';
+// import about2 from '../../assets/ravno.png';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faNodeJs, faSass, faVuejs, faAmazon, faGithub, faLess } from '@fortawesome/free-brands-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faReact, faNodeJs, faSass, faVuejs, faAmazon, faGithub, faLess } from '@fortawesome/free-brands-svg-icons';
 export class About extends Component {
 	render () {
 		return (
@@ -12,7 +12,7 @@ export class About extends Component {
 				<Header componentName={'About'}> </Header>
 				<section className="about-section abt-sec-1">
 					<div>
-						<img src={about} alt="Portfolio icon" />
+						{/* <img src={about} alt="Portfolio icon" /> */}
 					</div>
 					<div>
 						<h6>Who am I?</h6>
@@ -30,7 +30,7 @@ export class About extends Component {
 							Native, Vue.js, and Angular. 
 						</p>
 						<div className="icon-container">
-							<img src={about2} alt="about icon" />
+							{/* <img src={about2} alt="about icon" /> */}
 							{/* <FontAwesomeIcon className="react" icon={faReact} />
 							<FontAwesomeIcon className="node" icon={faNodeJs} />
 							<FontAwesomeIcon className="vue" icon={faVuejs} />

@@ -1,0 +1,665 @@
+/*
+  TOC:
+  I. Palette
+  II. Font
+  III. Components
+  IV. Containers
+*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideOut {
+  to {
+    translate: transformX(30px);
+  }
+}
+
+@keyframes slideOut {
+  to {
+    translate: transformX(30px);
+  }
+}
+
+nav {
+  height: 5%;
+  z-index: 2;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
+}
+
+nav .selected {
+  color: #3F8EE1;
+  -webkit-transition: color 0.5s, -webkit-transform 0.5s;
+  transition: color 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, color 0.5s;
+  transition: transform 0.5s, color 0.5s, -webkit-transform 0.5s;
+}
+
+nav span {
+  font-weight: bold;
+  letter-spacing: 3px;
+  border-bottom: 2px solid white;
+}
+
+nav a {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  padding: 20px 0px;
+  font-size: 26px;
+  font-weight: lighter;
+  text-decoration: none;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  color: #202020;
+}
+
+nav a:hover {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.logo {
+  position: absolute;
+  font-size: 38px;
+  padding: 10px 25px;
+  font-weight: bolder;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  float: right;
+  position: relative;
+  width: 22px;
+  height: 20px;
+  right: 14px;
+  top: 24px;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.bm-burger-button button:focus {
+  outline: none;
+}
+
+.bm-burger-button button:hover {
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  color: #3F8EE1;
+}
+
+.bm-burger-button:focus {
+  outline: none;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  opacity: 1 !important;
+  background: #3F8EE1;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 48px;
+  width: 48px;
+}
+
+.bm-cross-button button:focus {
+  outline: none;
+}
+
+.bm-cross-button button:hover {
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  color: #3F8EE1;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #dbdbdb;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  width: 48px;
+  height: 48px;
+}
+
+.bm-cross:focus {
+  background-color: #3F8EE1;
+  outline: none;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #4e515e;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-menu button:hover {
+  color: #3F8EE1;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+.bm-icon {
+  width: 48px;
+  height: 48px;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+/* Individual item */
+.bm-item {
+  color: white;
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.bm-item:focus {
+  outline: none;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+main {
+  height: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+main h2 {
+  color: #2b2b2b;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+main .main-parent-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: fadeIn 3s forwards;
+          animation: fadeIn 3s forwards;
+  height: 100%;
+  width: 100%;
+}
+
+main .main-parent-container .info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+main .main-parent-container .info-container span {
+  font-size: 1.4em;
+  line-height: 32px;
+}
+
+main .main-parent-container .info-container span span {
+  font-size: 1em;
+}
+
+main .main-parent-container .info-container section {
+  height: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 350px;
+  padding: 0  30px;
+}
+
+main .main-parent-container .info-container section div {
+  width: 100%;
+}
+
+main .main-parent-container .info-container div {
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+main .main-parent-container .info-container div a {
+  color: #3F8EE1;
+  padding: 10px 12px;
+  border: 3px solid #e2e2e2;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  margin-right: 20px;
+}
+
+main .main-parent-container .info-container div a:hover {
+  background-color: #f3f3f3;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+main .main-parent-container .image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.about-container {
+  height: 95vh;
+}
+
+.about-container div h2 {
+  -webkit-animation: fadeIn 0.75s forwards;
+          animation: fadeIn 0.75s forwards;
+}
+
+.about-container h6 {
+  font-size: 28px;
+}
+
+.about-container p {
+  font-size: 16px;
+  padding: 10px;
+  color: #1d1d1d;
+  border-radius: 5px;
+  max-width: 550px;
+}
+
+.about-container .abt-sec-1 {
+  -webkit-animation: fadeIn 0.75s forwards;
+          animation: fadeIn 0.75s forwards;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-container .abt-sec-1 img {
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.about-container .abt-sec-1 h6 {
+  color: #bd76f7;
+}
+
+.about-container .abt-sec-1 p {
+  background-color: rgba(226, 169, 252, 0.4);
+}
+
+.about-container .abt-sec-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #10ACEE;
+}
+
+.about-container .abt-sec-2 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.about-container .abt-sec-2 p {
+  width: 60%;
+  height: 80px;
+  color: #2e2e2e;
+  background-color: rgba(129, 205, 255, 0.4);
+}
+
+.about-container .abt-sec-2 .icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50%;
+  height: 100%;
+}
+
+.about-container .abt-sec-2 .icon-container img {
+  height: 100%;
+  width: 100%;
+}
+
+.about-container .abt-sec-2 svg {
+  font-size: 45px;
+  margin-left: 10px;
+}
+
+.about-container .abt-sec-3 {
+  height: 30%;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(70%, #F16244), color-stop(30%, #e76146));
+  background: linear-gradient(to right bottom, #F16244 70%, #e76146 30%);
+}
+
+.about-container section {
+  -webkit-animation: fadeIn 0.75s forwards;
+          animation: fadeIn 0.75s forwards;
+  min-height: 340px;
+  padding: 20px;
+  color: #ececec;
+}
+
+.about-container section h3 {
+  padding: 10px 0;
+}
+
+.amazon {
+  color: green;
+}
+
+.node {
+  color: #166616;
+}
+
+.vue {
+  color: #29531c;
+}
+
+.sass {
+  color: #ffa2b2;
+}
+
+.less {
+  color: #4f69ff;
+}
+
+.github {
+  color: black;
+}
+
+.amazon {
+  color: orange;
+}
+
+.react {
+  color: #00a2ff;
+}
+
+@media only screen and (max-width: 700px) {
+  .abt-sec-1 {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .abt-sec-2 div {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .abt-sec-2 div p {
+    width: 100% !important;
+  }
+  .abt-sec-2 div .icon-container {
+    width: 100% !important;
+  }
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  font-family: 'Inconsolata', monospace;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+  font-size: 26px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: lighter;
+  color: #464646;
+  width: 100%;
+  height: 5%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.projects {
+  height: 100%;
+  width: 100%;
+  height: 95vh;
+}
+
+.projects h2 {
+  -webkit-animation: fadeIn 0.35s forwards;
+          animation: fadeIn 0.35s forwards;
+}
+
+.notes {
+  height: 100%;
+  width: 100%;
+  height: 95vh;
+}
+
+.notes h2 {
+  -webkit-animation: fadeIn 0.35s forwards;
+          animation: fadeIn 0.35s forwards;
+}
+
+.lrg-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lrg-btn button {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  color: #38A487;
+  font-size: 18px;
+  border: #38A487 2px solid;
+  background-color: #E0EBE8;
+  -webkit-transition: background-color 1s, color 1s;
+  transition: background-color 1s, color 1s;
+  background-size: cover;
+}
+
+.lrg-btn button:hover {
+  background-color: #38A487;
+  color: #E0EBE8;
+  -webkit-transition: background-color 1s, color 1s;
+  transition: background-color 1s, color 1s;
+}
+
+.lrg-btn button:focus {
+  outline: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,30 @@
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideOut {
+  to {
+    translate: transformX(30px);
+  }
+}
+
+@keyframes slideOut {
+  to {
+    translate: transformX(30px);
+  }
+}
+/*# sourceMappingURL=animations.css.map */

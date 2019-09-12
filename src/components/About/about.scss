@@ -7,35 +7,47 @@
     }
   }
   h6 {
-    font-size: 35px;
+    font-size: 28px;
   }
   & p {
     font-size: 16px;
     padding: 10px;
     color: rgb(241, 241, 241);
-    background-color: rgba(197, 197, 197,0.4);
     border-radius: 5px;
+    max-width: 550px;
   }
     & .abt-sec-1 {
       animation: fadeIn 0.75s forwards;
       @include flex(row, center);
       align-items: center;
       background: linear-gradient(to right bottom, #05ABEC 70%, rgb(4, 162, 224)  30%);
-      height: 30%;
+      height: 40%;
+      & img {
+        height: 150px;
+        object-fit:cover;
+        width: 150px;
+        border-radius:50%;
+      }
+      & p {
+          background-color: rgba(197, 197, 197,0.4);
+
+      }
     }
     & .abt-sec-2 {
       @include flex(column, space-around);
-      height: 30%;
+      height: 50%;
       color: #10ACEE;
-      background: linear-gradient(to right bottom, rgb(255, 255, 255) 70%, rgb(245, 245, 245)   30%);
+      // background: linear-gradient(to right bottom, rgb(255, 255, 255) 70%, rgb(245, 245, 245)   30%);
       & div {
-      @include flex(row, space-around);
-      height: 75%;
+          @include flex(row, space-around);
 
       }
       & p {
         width: 60%;
+        height: 80px;
         color: rgb(46, 46, 46);
+        background-color: rgba(129, 205, 255, 0.4);
+
       }
       & .icon-container {
         display: flex;
@@ -44,6 +56,10 @@
         flex-wrap: wrap;
         width: 50%;
         height: 100%;
+        & img {
+          height: 100%;
+          width: 100%;
+        }
       }
       & svg {
         font-size: 45px;
@@ -53,24 +69,19 @@
     }
     & .abt-sec-3 {
       height: 30%;
-
       background: linear-gradient(to right bottom, #F16244 70%, rgb(231, 97, 70)   30%);
     }
 
   
   & section {
     animation: fadeIn 0.75s forwards;
+    min-height: 340px;
     & h3 {
       padding: 10px 0;
     }
     padding: 20px;
     color: rgb(236, 236, 236);
-    & img {
-      height: 200px;
-      object-fit:cover;
-      width: 200px;
-      border-radius:50%;
-    }
+   
   }
 }
 
@@ -105,6 +116,16 @@
     flex-direction: column !important;
 
   }
-
+  .abt-sec-2 {
+    & div {
+    flex-direction: column !important;
+    & p {
+      width: 100% !important;
+    }
+    & .icon-container {
+      width: 100% !important;
+    }
+    }
+  }
 }
 

@@ -4,18 +4,39 @@ nav {
   min-height: 30px;
   align-content: center;
   animation: fadeIn 2s;
-  @include flex(row, flex-start)
+  @include flex(row, flex-start);
   & section {
     padding: 10px;
     & a {
-      font-size: 20px;
-      margin: 0 20px;
+      font-weight: bold;
+      font-size: 14px;
+      margin: 0 05px;
+      transition:  color 0.5s;
+      padding:  5px;
+      color: rgb(62, 62, 62);
+      transition: transform 0.5s, color 0.5s, background-color 0.5s;
+
+
+    }
+    & a:hover {
+      color: #3F8EE1;
+      transition:  color 0.5s;
+    }
+    & .selected {
+      background-color : rgb(239, 239, 239);
+      border-radius: 4px;
+      transition: color 0.5s, background-color 0.5s;
+  
     }
   }
-  & .selected {
-    color: #3F8EE1;
-    transition: transform 0.5s, color 0.5s;
-
+  
+  & a {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    padding: 20px 0px;
+    font-size: 26px;
+    font-weight:lighter;
+    text-decoration: none;
   }
   & div {
     display: none;
@@ -29,21 +50,7 @@ nav {
     border-bottom: 2px solid white;
   }
 
-  & a {
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2px;
-    padding: 20px 0px;
-    font-size: 26px;
-    font-weight:lighter;
-    text-decoration: none;
-    transition: transform 0.5s;
-    color: rgb(32, 32, 32);
 
-  }
-  & a:hover { 
-    transform: translateX(10px);
-    transition: transform 0.5s;
-  }
 }
 
 .logo {
@@ -135,6 +142,16 @@ Note: Beware of modifying this element as it can break the animations - you shou
     color: #3F8EE1;
     transition: color 0.5s;
   }
+  & a {
+  
+    transition: transform 0.5s;
+    color: white;
+
+  }
+  & a:hover { 
+    transform: translateX(10px);
+    transition: transform 0.5s;
+  }
 
 }
 
@@ -169,7 +186,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width:500px) {
  nav {
    display: block;
    & section {

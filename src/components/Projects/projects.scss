@@ -1,9 +1,39 @@
 .projects {
   @include inheritHW();
   height: 95vh;
+  & .sec-1 {
+    @include flex(column, center);
+    align-items:center;
+    & img {
+      width: 150px;
+      min-height: 150px;
+      align-self: center;
+    }
+    & h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      font-weight: 300;
+    }
+    & p {
+      font-size: 16px;
+      font-weight: 300;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  & .sec-2 {
+    padding: 100px 10px;
+    background-color: #7DCC93;
 
+    & div {
+      @include flex(row, center);
+    }
+    & img {
+      width: 90%;
+    }
+  }
   & h2 {
     animation: fadeIn 0.35s forwards;
-
   }
+
 }
